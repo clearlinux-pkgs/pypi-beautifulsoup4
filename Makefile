@@ -1,5 +1,5 @@
 PKG_NAME := pypi-beautifulsoup4
-URL = https://files.pythonhosted.org/packages/a1/69/daeee6d8f22c997e522cdbeb59641c4d31ab120aba0f2c799500f7456b7e/beautifulsoup4-4.10.0.tar.gz
+URL = https://files.pythonhosted.org/packages/ce/a1/b8e714f2e6345ded6a6c43cc43b308903153e3091763ec6832f82de7a269/beautifulsoup4-4.11.0.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
