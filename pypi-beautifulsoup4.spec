@@ -4,7 +4,7 @@
 #
 Name     : pypi-beautifulsoup4
 Version  : 4.11.1
-Release  : 87
+Release  : 88
 URL      : https://files.pythonhosted.org/packages/e8/b0/cd2b968000577ec5ce6c741a54d846dfa402372369b8b6861720aa9ecea7/beautifulsoup4-4.11.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/e8/b0/cd2b968000577ec5ce6c741a54d846dfa402372369b8b6861720aa9ecea7/beautifulsoup4-4.11.1.tar.gz
 Summary  : Screen-scraping library
@@ -14,9 +14,9 @@ Requires: pypi-beautifulsoup4-license = %{version}-%{release}
 Requires: pypi-beautifulsoup4-python = %{version}-%{release}
 Requires: pypi-beautifulsoup4-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
-BuildRequires : py
 BuildRequires : pypi(soupsieve)
-BuildRequires : pytest
+BuildRequires : pypi-py
+BuildRequires : pypi-pytest
 
 %description
 Beautiful Soup is a Python package for parsing HTML and XML documents.
@@ -58,7 +58,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1649719399
+export SOURCE_DATE_EPOCH=1650499542
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
