@@ -4,7 +4,7 @@
 #
 Name     : pypi-beautifulsoup4
 Version  : 4.11.1
-Release  : 97
+Release  : 98
 URL      : https://files.pythonhosted.org/packages/e8/b0/cd2b968000577ec5ce6c741a54d846dfa402372369b8b6861720aa9ecea7/beautifulsoup4-4.11.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/e8/b0/cd2b968000577ec5ce6c741a54d846dfa402372369b8b6861720aa9ecea7/beautifulsoup4-4.11.1.tar.gz
 Summary  : Screen-scraping library
@@ -17,6 +17,9 @@ BuildRequires : buildreq-distutils3
 BuildRequires : pypi(soupsieve)
 BuildRequires : pypi-py
 BuildRequires : pypi-pytest
+# Suppress stripping binaries
+%define __strip /bin/true
+%define debug_package %{nil}
 
 %description
 Beautiful Soup is a Python package for parsing HTML and XML documents.
@@ -61,12 +64,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1656361126
+export SOURCE_DATE_EPOCH=1672259351
 export GCC_IGNORE_WERROR=1
-export CFLAGS="$CFLAGS -fno-lto "
-export FCFLAGS="$FFLAGS -fno-lto "
-export FFLAGS="$FFLAGS -fno-lto "
-export CXXFLAGS="$CXXFLAGS -fno-lto "
+export CFLAGS="$CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz "
+export FCFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz "
+export FFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz "
+export CXXFLAGS="$CXXFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz "
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
@@ -83,8 +86,8 @@ popd
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/pypi-beautifulsoup4
-cp %{_builddir}/beautifulsoup4-4.11.1/COPYING.txt %{buildroot}/usr/share/package-licenses/pypi-beautifulsoup4/47fc2b45d986308bdbd2faa0457f696c581396db
-cp %{_builddir}/beautifulsoup4-4.11.1/LICENSE %{buildroot}/usr/share/package-licenses/pypi-beautifulsoup4/47fc2b45d986308bdbd2faa0457f696c581396db
+cp %{_builddir}/beautifulsoup4-%{version}/COPYING.txt %{buildroot}/usr/share/package-licenses/pypi-beautifulsoup4/47fc2b45d986308bdbd2faa0457f696c581396db || :
+cp %{_builddir}/beautifulsoup4-%{version}/LICENSE %{buildroot}/usr/share/package-licenses/pypi-beautifulsoup4/47fc2b45d986308bdbd2faa0457f696c581396db || :
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
