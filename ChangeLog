@@ -1,7 +1,30 @@
-Beautiful Soup's official support for Python 2 ended on January 1st,
+Note: Beautiful Soup's official support for Python 2 ended on January 1st,
 2021. The final release to support Python 2 was Beautiful Soup
-4.9.3. In the Launchpad Bazaar repository, the final revision to support
-Python 2 was revision 605.
+4.9.3. In the Launchpad Git repository, the final revision to support
+Python 2 was revision 70f546b1e689a70e2f103795efce6d261a3dadf7.
+
+= 4.11.2 (20230131)
+
+* Fixed test failures caused by nondeterministic behavior of
+  UnicodeDammit's character detection, depending on the platform setup.
+  [bug=1973072]
+
+* Fixed another crash when overriding multi_valued_attributes and using the
+  html5lib parser. [bug=1948488]
+
+* The HTMLFormatter and XMLFormatter constructors no longer return a
+  value. [bug=1992693]
+
+* Tag.interesting_string_types is now propagated when a tag is
+  copied. [bug=1990400]
+
+* Warnings now do their best to provide an appropriate stacklevel,
+  improving the usefulness of the message. [bug=1978744]
+
+* Passing a Tag's .contents into PageElement.extend() now works the
+  same way as passing the Tag itself.
+
+* Soup Sieve tests will be skipped if the library is not installed.
 
 = 4.11.1 (20220408)
 
