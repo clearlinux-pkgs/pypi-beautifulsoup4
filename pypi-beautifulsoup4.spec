@@ -4,10 +4,10 @@
 # Using build pattern: pyproject
 #
 Name     : pypi-beautifulsoup4
-Version  : 4.12.1
-Release  : 102
-URL      : https://files.pythonhosted.org/packages/4e/2f/63c252850ca79759810a988c0555cdfb67a89750743ae3943a1de106a5d2/beautifulsoup4-4.12.1.tar.gz
-Source0  : https://files.pythonhosted.org/packages/4e/2f/63c252850ca79759810a988c0555cdfb67a89750743ae3943a1de106a5d2/beautifulsoup4-4.12.1.tar.gz
+Version  : 4.12.2
+Release  : 103
+URL      : https://files.pythonhosted.org/packages/af/0b/44c39cf3b18a9280950ad63a579ce395dda4c32193ee9da7ff0aed547094/beautifulsoup4-4.12.2.tar.gz
+Source0  : https://files.pythonhosted.org/packages/af/0b/44c39cf3b18a9280950ad63a579ce395dda4c32193ee9da7ff0aed547094/beautifulsoup4-4.12.2.tar.gz
 Summary  : Screen-scraping library
 Group    : Development/Tools
 License  : MIT
@@ -54,10 +54,10 @@ python3 components for the pypi-beautifulsoup4 package.
 
 
 %prep
-%setup -q -n beautifulsoup4-4.12.1
-cd %{_builddir}/beautifulsoup4-4.12.1
+%setup -q -n beautifulsoup4-4.12.2
+cd %{_builddir}/beautifulsoup4-4.12.2
 pushd ..
-cp -a beautifulsoup4-4.12.1 buildavx2
+cp -a beautifulsoup4-4.12.2 buildavx2
 popd
 
 %build
@@ -65,7 +65,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1680724711
+export SOURCE_DATE_EPOCH=1680890867
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz "
 export FCFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz "
