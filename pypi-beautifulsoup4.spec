@@ -5,7 +5,7 @@
 #
 Name     : pypi-beautifulsoup4
 Version  : 4.12.2
-Release  : 104
+Release  : 105
 URL      : https://files.pythonhosted.org/packages/af/0b/44c39cf3b18a9280950ad63a579ce395dda4c32193ee9da7ff0aed547094/beautifulsoup4-4.12.2.tar.gz
 Source0  : https://files.pythonhosted.org/packages/af/0b/44c39cf3b18a9280950ad63a579ce395dda4c32193ee9da7ff0aed547094/beautifulsoup4-4.12.2.tar.gz
 Summary  : Screen-scraping library
