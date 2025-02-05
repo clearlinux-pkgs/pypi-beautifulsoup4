@@ -6,10 +6,10 @@
 # autospec commit: 94c6be0
 #
 Name     : pypi-beautifulsoup4
-Version  : 4.13.1
-Release  : 110
-URL      : https://files.pythonhosted.org/packages/58/f3/d90227cc52f7b8fcd0f2af804f56e55edf8dd07036b681a2809e3245318b/beautifulsoup4-4.13.1.tar.gz
-Source0  : https://files.pythonhosted.org/packages/58/f3/d90227cc52f7b8fcd0f2af804f56e55edf8dd07036b681a2809e3245318b/beautifulsoup4-4.13.1.tar.gz
+Version  : 4.13.3
+Release  : 111
+URL      : https://files.pythonhosted.org/packages/f0/3c/adaf39ce1fb4afdd21b611e3d530b183bb7759c9b673d60db0e347fd4439/beautifulsoup4-4.13.3.tar.gz
+Source0  : https://files.pythonhosted.org/packages/f0/3c/adaf39ce1fb4afdd21b611e3d530b183bb7759c9b673d60db0e347fd4439/beautifulsoup4-4.13.3.tar.gz
 Summary  : Screen-scraping library
 Group    : Development/Tools
 License  : MIT
@@ -57,13 +57,13 @@ python3 components for the pypi-beautifulsoup4 package.
 
 
 %prep
-%setup -q -n beautifulsoup4-4.13.1
-cd %{_builddir}/beautifulsoup4-4.13.1
+%setup -q -n beautifulsoup4-4.13.3
+cd %{_builddir}/beautifulsoup4-4.13.3
 pushd ..
-cp -a beautifulsoup4-4.13.1 buildavx2
+cp -a beautifulsoup4-4.13.3 buildavx2
 popd
 pushd ..
-cp -a beautifulsoup4-4.13.1 buildapx
+cp -a beautifulsoup4-4.13.3 buildapx
 popd
 
 %build
@@ -71,7 +71,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1738595839
+export SOURCE_DATE_EPOCH=1738768784
 export GCC_IGNORE_WERROR=1
 CLEAR_INTERMEDIATE_CFLAGS="$CLEAR_INTERMEDIATE_CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 CLEAR_INTERMEDIATE_FCFLAGS="$CLEAR_INTERMEDIATE_FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
